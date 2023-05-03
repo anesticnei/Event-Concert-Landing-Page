@@ -7,10 +7,8 @@ body{
     font-family: 'Pathway Extreme', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     background-color: #070D0C;
+    overflow: hidden;
 }
-/* .nav-bg{
-    background-color: #070D0C;
-} */
 .button-bg-nav{
     background-color: #9154E4;
 }
@@ -52,14 +50,36 @@ body{
     display: flex;
     flex-direction: row;
     gap: 12rem;
-    /* gap: 10vw; */
     width: 100%;
     height: 100%;
 }
-
 .box{
     background-color: #070D0C;
     width: 200px;
 }
-
-
+.brands-container{
+    background-color: #03090B;
+    background-color: #293533;
+}
+.jbl-logo{
+    width: 20%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    fill: aliceblue;
+    color: aliceblue;
+    mix-blend-mode: color-burn;
+}
+.logo-spec{
+    width: 50%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    fill: aliceblue;
+    color: aliceblue;
+    mix-blend-mode: color-burn;
+    /* mix-blend-mode:hard-light; */
+}
+.brand-logos{
+    width: 600px;
+    min-width: 160px;
+    height: 100%;
+}
