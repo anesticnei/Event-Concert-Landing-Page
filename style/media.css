@@ -1,0 +1,5 @@
+@media (min-width:1000px) {
+    .grid-temp-col{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
