@@ -178,9 +178,37 @@ display: none;
 
 
 
-/* HERO SECTION */
-
-
+/* ARTIST SECTION */
+.artist-content{
+    /* height: 10rem; */
+    width: 20rem;
+    min-width: 18rem;
+    aspect-ratio:  3/4;
+    object-fit: cover;
+    /* background-position: center; */
+    overflow: hidden;
+    border-radius: 10px;
+}
+.artist-name{
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+}
+.linear-box{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    bottom: -6rem;
+    left: -4rem;
+    /* background-color: #9054e4; */
+    /* background-color: #000000; */
+    background-color: rgb(57, 57, 57);
+    border-radius: 999px;
+    filter: blur(45px);
+    opacity: .8;
+    /* z-index: 1; */
+}
 
 /* FOOTER SECTION */
 

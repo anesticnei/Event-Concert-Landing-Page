@@ -2,4 +2,7 @@
     .grid-temp-col{
         grid-template-columns: repeat(2, 1fr);
     }
+    .font-size-title{
+        font-size: clamp(5rem, 2vw, 6rem);
+    }
 }

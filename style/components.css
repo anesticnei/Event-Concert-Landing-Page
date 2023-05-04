@@ -190,6 +190,11 @@
     padding-bottom: 4rem;
     padding-block: 4rem;
 }
+.padd-block-8rem{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-block: 8rem;
+}
 .padd-1rem{
     padding: 1rem;
 }
