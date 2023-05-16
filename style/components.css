@@ -36,6 +36,9 @@
 .justify-between{
     justify-content: space-between;
 }
+.justify-evenly{
+    justify-content: space-evenly;
+}
 .justify-start{
     justify-content: flex-start;
 }
@@ -182,6 +185,16 @@
     padding-bottom: 2rem;
     padding-block: 2rem;
 }
+.padd-block-4rem{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-block: 4rem;
+}
+.padd-block-8rem{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-block: 8rem;
+}
 .padd-1rem{
     padding: 1rem;
 }
@@ -226,10 +239,10 @@
     font-size: clamp(1rem, 1vw, 1.2rem);
 }
 .font-size-title{
-    font-size: clamp(5rem, 2vw, 6rem);
+    font-size: clamp(3rem, 2vw, 6rem);
 }
 .font-size-sub-title{
-    font-size: clamp(1rem, 1vw, 1.1rem);
+    font-size: clamp(1rem, 1vw, 1.2rem);
 }
 .font-size-span{
     font-size: clamp(1rem, 1vw, 1.4rem);
@@ -299,7 +312,7 @@
     background: none;
 }
 .bg-nav{
-    background-color: #AFAFAF;
+    background-color:rgba(7, 13, 12, .8);
 }
 .bg-section-dark{
     background-color: #292929;
@@ -378,6 +391,13 @@
 /* OTHER */
 .cursor-pointer{
     cursor: pointer;
+}
+.white-space{
+    white-space: nowrap;
+}
+
+.text-ellipsis{
+    text-overflow: ellipsis
 }
 
 /* KEY FRAMES - ANIMATIONS */
