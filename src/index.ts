@@ -91,3 +91,11 @@ function renderArtist(favouriteArtist: Artist){
 for (const artist of favouriteArtist) {
     renderArtist(artist);
 }
+
+
+const modalWrapper = document.querySelector('.artis-module-wrapper') as HTMLDivElement;
+
+const scrollPosition = window.scrollY;
+const topPosition = scrollPosition + 16;
+
+modalWrapper.style.top = `${topPosition}px`

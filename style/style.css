@@ -259,30 +259,72 @@ body{
 }
 
 .artis-module-container{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
-    /* background-color: #03090B; */
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
     z-index: 10000;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+    /* display: none; */
 }
 .artis-module-wrapper{
+    position: fixed;
+    top: calc(1rem + var(--scroll-y));
+    /* left: 0; */
+    transform-origin: center top;
     background-color: rgba(47, 47, 47, .99);
     max-width: 1000px;
     margin: 0rem auto;
     /* padding: 2rem; */
-    padding-inline: 2rem;
-    padding-block: 10rem;
+    /* padding-inline: 2rem;
+    padding-block: 10rem; */
     width: 100%;
-    height: 60vh;
+    height: 60rem;
+    will-change: scroll-position;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.previewModal--avatar{
+    max-height: 30rem;
+}
+.previewModal--avatar-img{
+    /* object-fit: cover; */
 
 }
+.previewModal--close{
+    background-color: violet;
+    position: absolute;
+    max-width: 40px;
+    max-height: 40px;
+    top: 0;
+    right: 0;
+}
+.previewModal--info{
+    background-color: yellowgreen;
+}
+
+.single-avatar{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.background-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+}
+
 /* FOOTER SECTION */
 
 footer{
