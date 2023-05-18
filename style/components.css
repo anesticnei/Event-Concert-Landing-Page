@@ -356,7 +356,9 @@
 .box-shadow-big-rounded{
     box-shadow: rgba(0, 0, 0, 0.35) 10px 10px 10px;
 }
-
+.border-top{
+    border-top: 1px solid #292929;
+}
 /* OVERFLOW & OBJECT */
 .overflow-hidden{
     overflow: hidden;

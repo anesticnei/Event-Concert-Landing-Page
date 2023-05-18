@@ -74,3 +74,23 @@ function renderArtist(favouriteArtist) {
 for (const artist of favouriteArtist) {
     renderArtist(artist);
 }
+
+const artistModalContainer = document.querySelector('.artis-module-container')
+const modalWrapper = document.querySelector('.artis-module-wrapper');
+const scrollPosition = window.scrollY;
+const topPosition = scrollPosition + 16;
+modalWrapper.style.top = `${topPosition}px`;
+
+
+function renderArtistModal(favouriteArtist){
+    
+    const backgroundModal = document.createElement('div');
+    backgroundModal.className = 'background-modal';
+
+    const artistModal = document.createElement('div');
+    // artistModal.className = 'artis-module-wrapper';
+    artistModal.classList.add('artis-module-wrapper', 'flex', )
+    artistModalContainer.appendChild(artistModal);
+
+    artistModal.innerHTML = ``
+}
