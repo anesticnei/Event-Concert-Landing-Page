@@ -1,6 +1,6 @@
 # Event-Concert-Landing-Page
 
-Event Concert Landing Page is a dynamic platform designed to provide users with an intuitive and seamless experience for discovering and ordering concert tickets. It leverages the power of HTML, CSS, and JavaScript to create an interactive and responsive web application.
+Event Concert Landing Page is a non-commercial, dynamic platform designed to provide users with an intuitive and seamless experience for discovering and ordering concert tickets. It leverages the power of HTML, CSS, and JavaScript to create an interactive and responsive web application.
 
 # Features
 
