@@ -1,7 +1,6 @@
 # Event-Concert-Landing-Page
-  Based on my inspiration i want to make this UI design live.
-  
-  I want this web to be clicklible, clean, animated, and everything needs to work as is should be. 
+
+Event Concert Landing Page is a dynamic platform designed to provide users with an intuitive and seamless experience for discovering and ordering concert tickets. It leverages the power of HTML, CSS, and JavaScript to create an interactive and responsive web application.
 
 # Features
 
