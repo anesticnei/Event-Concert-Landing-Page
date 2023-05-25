@@ -271,10 +271,13 @@ body{
     justify-content: center;
     /* display: none; */
 }
-.artis-module-wrapper{
+.artist-module-wrapper{
     position: fixed;
-    top: calc(1rem + var(--scroll-y));
-    /* left: 0; */
+    /* position: absolute; */
+    /* top: calc(1rem + var(--scroll-y)); */
+    bottom: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
     transform-origin: center top;
     background-color: rgba(47, 47, 47, .99);
     max-width: 1000px;
@@ -323,6 +326,7 @@ body{
     width: 100%;
     height: 100%;
     backdrop-filter: blur(8px);
+    display: none;
 }
 
 /* FOOTER SECTION */
