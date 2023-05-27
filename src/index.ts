@@ -322,13 +322,19 @@ function renderArtist(favouriteArtist: Artist) {
 
     
   }
+  document.body.addEventListener('wheel', preventScroll, {passive: false});
+    function preventScroll(e: any){
+        e.preventDefault();
+        e.stopPropagation();
 
+        return false;
+    }
   const closeModalBtn = document.querySelectorAll('.previewModal--close');
   const backgroundModal = document.querySelector('.background-modal') as HTMLDivElement;
   backgroundModal.style.display = "block"
   closeModalBtn.forEach(btn => 
     btn.addEventListener("click", () =>{
-
+      document.body.removeEventListener('wheel', preventScroll);
           const artistModal = document.querySelector('.artist-module-wrapper') as HTMLDivElement;
           if(artistModalContainer)
           artistModal.remove()
@@ -336,7 +342,7 @@ function renderArtist(favouriteArtist: Artist) {
           backgroundModal.style.display = "none"
         }))
             backgroundModal?.addEventListener('click', () => {
-
+              document.body.removeEventListener('wheel', preventScroll);
                 const artistModal = document.querySelector('.artist-module-wrapper') as HTMLDivElement;
                   artistModal.remove()
                     if(artistModalContainer)

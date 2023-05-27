@@ -251,10 +251,17 @@ function renderArtistModal(artist) {
         const topPosition = window.scrollY;
         artistModal.style.setProperty('--scroll-y', `${topPosition}px`);
     }
+    document.body.addEventListener('wheel', preventScroll, { passive: false });
+    function preventScroll(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
     const closeModalBtn = document.querySelectorAll('.previewModal--close');
     const backgroundModal = document.querySelector('.background-modal');
     backgroundModal.style.display = "block";
     closeModalBtn.forEach(btn => btn.addEventListener("click", () => {
+        document.body.removeEventListener('wheel', preventScroll);
         const artistModal = document.querySelector('.artist-module-wrapper');
         if (artistModalContainer)
             artistModal.remove();
@@ -262,6 +269,7 @@ function renderArtistModal(artist) {
         backgroundModal.style.display = "none";
     }));
     backgroundModal === null || backgroundModal === void 0 ? void 0 : backgroundModal.addEventListener('click', () => {
+        document.body.removeEventListener('wheel', preventScroll);
         const artistModal = document.querySelector('.artist-module-wrapper');
         artistModal.remove();
         if (artistModalContainer)
