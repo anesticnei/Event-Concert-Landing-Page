@@ -161,7 +161,7 @@ const favouriteArtist = [
     {
         name: "Alexandroo",
         avatar_img: "https://images.unsplash.com/photo-1550560888-7bd784b8ebec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80",
-        background_img: "https://images.unsplash.com/photo-1682685797277-f2bf89b24017?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3870&q=80",
+        background_img: "https://images.unsplash.com/photo-1550560888-7bd784b8ebec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80",
         about_artist: "",
     },
     {
