@@ -226,66 +226,44 @@ function renderArtist(favouriteArtist: Artist) {
     {
       name: "Pedro Moreno",
       avatar_img: "https://images.unsplash.com/photo-1576409372120-ffc3d5c260e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80",
-      background_img: "",
+      background_img: "https://images.unsplash.com/photo-1576409372120-ffc3d5c260e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80",
       about_artist: "",
     },
     {
       name: "Xenno",
       avatar_img: "https://images.unsplash.com/photo-1575426158836-0be172e108ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80",
-      background_img: "",
+      background_img: "https://images.unsplash.com/photo-1575426158836-0be172e108ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1635&q=80",
       about_artist: "",
     },
     {
       name: "Anomaly",
       avatar_img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80",
-      background_img: "",
+      background_img: "https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80",
       about_artist: "",
     },
     {
       name: "Christian Terson",
       avatar_img: "https://images.unsplash.com/photo-1575285113814-f770cb8c796e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      background_img: "",
+      background_img: "https://images.unsplash.com/photo-1575285113814-f770cb8c796e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
       about_artist: "",
     },
     {
       name: "Jon Altes",
       avatar_img: "https://images.unsplash.com/photo-1431308305062-f218b6fe520a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80",
-      background_img: "",
+      background_img: "https://images.unsplash.com/photo-1431308305062-f218b6fe520a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80",
       about_artist: "",
     },
   ];
   
+
+
+
+
   
-  function renderArtistModal(artist: Artist): void {
+  function renderArtistModal(artist: Artist) {
     const artistModalContainer = document.querySelector('.artis-module-container') as HTMLDivElement;
-    const modalWrapper = document.querySelector('.artis-module-wrapper') as HTMLDivElement;
+    // const modalWrapper = document.querySelector('.artist-module-wrapper') as HTMLDivElement;
   
-    // if (modalWrapper !== null) {
-    // //   const scrollPosition = window.scrollY;
-    //   const scrollPosition = window.innerHeight;
-    //   const topPosition = scrollPosition + 16;
-    //   modalWrapper.style.top = `${topPosition}px`;
-    // }
-  
-//     const topPosition = window.innerHeight * 0.01;
-// if (modalWrapper !== null) {
-//   modalWrapper.style.top = `${topPosition}px`;
-// }
-// window.addEventListener('resize', () => {
-//   const topPosition = window.innerHeight * 0.01;
-//   if (modalWrapper !== null) {
-//     modalWrapper.style.top = `${topPosition}px`;
-//   }
-// });
-
-
-// if (modalWrapper !== null) {
-// //     const topPosition = 1 + window.scrollY; // Adjust the offset value as needed
-// //     modalWrapper.style.top = `${topPosition}px`;
-// modalWrapper.scrollIntoView(true)
-//   }
-
-
     if (artistModalContainer !== null) {
     //   const backgroundModal = document.createElement('div');
     //   backgroundModal.className = 'background-modal';
@@ -339,35 +317,34 @@ function renderArtist(favouriteArtist: Artist) {
             </div>
           </div>
         </div>`;
-    }
-    const closeModalBtn = document.querySelectorAll('.previewModal--close');
-    const backgroundModal = document.querySelector('.background-modal') as HTMLDivElement;
-    // const artistModalContainer = document.querySelector('.artis-module-container') as HTMLDivElement;
-    backgroundModal.style.display = "block"
-    closeModalBtn.forEach(btn => 
-        btn.addEventListener("click", () =>{
-            if(artistModalContainer)
-            artistModalContainer.style.display = 'none';
-            backgroundModal.style.display = "none"
+      const topPosition: number = window.scrollY;
+    artistModal.style.setProperty('--scroll-y', `${topPosition}px`);
+
+    
+  }
+
+  const closeModalBtn = document.querySelectorAll('.previewModal--close');
+  const backgroundModal = document.querySelector('.background-modal') as HTMLDivElement;
+  backgroundModal.style.display = "block"
+  closeModalBtn.forEach(btn => 
+    btn.addEventListener("click", () =>{
+
+          const artistModal = document.querySelector('.artist-module-wrapper') as HTMLDivElement;
+          if(artistModalContainer)
+          artistModal.remove()
+          artistModalContainer.style.display = 'none';
+          backgroundModal.style.display = "none"
         }))
-        
-        // backgroundModal.forEach(bg => bg.addEventListener("click", () =>{
-            //     if(artistModalContainer)
-            //     artistModalContainer.style.display = 'none';
-            // }))
-            
-            // closeModalBtn?.addEventListener('click', () => {
-                //     if(artistModalContainer)
-                //         artistModalContainer.style.display = 'none';
-                //         // artistModalContainer.remove();
-                // });
-                
-                backgroundModal?.addEventListener('click', () => {
+            backgroundModal?.addEventListener('click', () => {
+
+                const artistModal = document.querySelector('.artist-module-wrapper') as HTMLDivElement;
+                  artistModal.remove()
                     if(artistModalContainer)
                     artistModalContainer.style.display = 'none';
                     backgroundModal.style.display = "none"
     });
   }
+
   
   // Example usage:
   favouriteArtist.forEach((artist) => {
